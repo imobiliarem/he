@@ -2,6 +2,24 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) - Macor Imobiliare -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11348796810"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11348796810');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('wa.me') > -1 || h.indexOf('whatsapp') > -1) {
+      gtag('event', 'contact_whatsapp', { link_url: h, page_location: location.href });
+    } else if (h.indexOf('tel:') === 0) {
+      gtag('event', 'contact_telefon', { link_url: h, page_location: location.href });
+    }
+  });
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ניהול נכסים בבוקרשט לבעלי נכסים מישראל | Macor Imobiliare</title>
 <meta name="description" content="ניהול מלא של הדירה, הבית או הבניין שלכם בבוקרשט: השכרה, ניירת מול הרשויות, תיקונים, שיפוץ מלא וייצוג בכל מצב. מאז 2008.">
